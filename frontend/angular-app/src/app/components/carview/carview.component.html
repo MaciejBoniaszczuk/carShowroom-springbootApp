@@ -1,0 +1,99 @@
+<html>
+<head>
+</head>
+<body>
+<alert type="success">Auta w bazie:</alert>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">ID</th>
+    <th scope="col">Brand</th>
+    <th scope="col">Model</th>
+    <th scope="col">Color</th>
+    <th scope="col">Production Year</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let car of rootObject; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ car.carId }}</td>
+    <td>{{ car.brand }}</td>
+    <td>{{ car.model }}</td>
+    <td>{{ car.color }}</td>
+    <td>{{ car.productionDate}}</td>
+  </tr>
+  </tbody>
+</table>
+<alert type="success">Dodaj auto:</alert>
+<form>
+  <div class="form-group">
+    <label for="exampleInputModel">ID</label>
+    <input type="number" class="form-control" id="exampleInputId" #carAddId aria-describedby="emailHelp" placeholder="Enter ID">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputModel">Brand</label>
+    <input type="text" class="form-control" id="exampleInputBrand" #carAddBrand aria-describedby="emailHelp" placeholder="Enter brand">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputBrand">Model</label>
+    <input type="text" class="form-control" id="exampleInputModel"  #carAddModel placeholder="Model">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputColor">Color</label>
+    <input type="text" class="form-control" id="exampleInputColor" #carAddColor placeholder="Color">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputProductionDate">Production date</label>
+    <input type="number" class="form-control" id="exampleInputProductionDate" #carAddProductionDate placeholder="Production date">
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="addCarButton(carAddId.value, carAddBrand.value, carAddModel.value, carAddColor.value,
+   carAddProductionDate.value)">ADD</button>
+</form>
+<br><br>
+<form>
+  <div class="form-group">
+    <alert type="success">Podaj przedział dat</alert>
+    <input type="number" class="form-control" id="exampleInputCarDate1" #carDate1 aria-describedby="emailHelp" placeholder="Od roku...">
+    <input type="number" class="form-control" id="exampleInputIdCarDate2" #carDate2 aria-describedby="emailHelp" placeholder="Do roku...">
+    <button type="submit" class="btn btn-primary" (click)="showByDate(carDate1.value,carDate2.value)">Wyświetl</button>
+    <div id="myDIV" style="display: none">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Model</th>
+          <th scope="col">Color</th>
+          <th scope="col">Production Year</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let car of rootObject1; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ car.carId }}</td>
+          <td>{{ car.brand }}</td>
+          <td>{{ car.model }}</td>
+          <td>{{ car.color }}</td>
+          <td>{{ car.productionDate}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</form>
+</body>
+</html>
+<!--<ul>-->
+<!--  <li *ngFor="let car of rootObject">-->
+<!--    {{car.carId}}-->
+<!--    {{car.brand}}-->
+<!--    {{car.model}}-->
+<!--    {{car.color}}-->
+<!--    {{car.productionDate}}-->
+<!--    <br><br>-->
+<!--  </li>-->
+<!--</ul>-->
+
