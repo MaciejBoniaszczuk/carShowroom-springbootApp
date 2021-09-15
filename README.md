@@ -9,11 +9,11 @@
   * Connection with MySQL
   
 ## Adding Car:
-  ![addCarOnPage](addCar.png)
+  ![addCarOnPage](addCar.PNG)
   
   
 ## Filtering by production date
-   ![page](page.png)
+   ![page](page.PNG)
     
 ## All cars are stored in database
-   ![db](db.png)
+   ![db](db.PNG)
