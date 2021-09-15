@@ -1,0 +1,16 @@
+.idea/carApi.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+car-api/.mvn/
+car-api/mvnw
+car-api/mvnw.cmd
+frontend/angular-app/.editorconfig
+frontend/angular-app/angular.json
+frontend/angular-app/browserslist
+frontend/angular-app/karma.conf.js
+frontend/angular-app/tsconfig.app.json
+frontend/angular-app/tsconfig.json
+frontend/angular-app/tsconfig.spec.json
+frontend/angular-app/tslint.json
